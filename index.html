@@ -3,42 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Form Validation</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <form id="form">
-      <h2>Register</h2>
+  <header>
+    <nav>
+      <div class="logo">KARTIK</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
 
-      <div class="form-control">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter username" />
-        <small>Error message</small>
-      </div>
+  <section id="home">...</section>
+  <section id="about">...</section>
+  <section id="skills">...</section>
+  <section id="projects">
+    <div id="project-container"></div>
+  </section>
+  <section id="contact">...</section>
 
-      <div class="form-control">
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Enter email" />
-        <small>Error message</small>
-      </div>
-
-      <div class="form-control">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter password" />
-        <small>Error message</small>
-      </div>
-
-      <div class="form-control">
-        <label for="password2">Confirm Password</label>
-        <input type="password" id="password2" placeholder="Confirm password" />
-        <small>Error message</small>
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
+  <footer>© 2025 Kartik Dugariya</footer>
   <script src="script.js"></script>
 </body>
 </html>
