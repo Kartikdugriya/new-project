@@ -3,33 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Interactive Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">KARTIK</div>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="themeToggle">🌙</button></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <h2 class="logo">Dashboard</h2>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Users</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-  <section id="home">...</section>
-  <section id="about">...</section>
-  <section id="skills">...</section>
-  <section id="projects">
-    <div id="project-container"></div>
-  </section>
-  <section id="contact">...</section>
+    <!-- Main Content -->
+    <div class="main">
+      <header class="topbar">
+        <button id="toggleSidebar">☰</button>
+        <h1>Welcome Back!</h1>
+        <button id="toggleTheme">🌙</button>
+      </header>
 
-  <footer>© 2025 Kartik Dugariya</footer>
-  <script src="script.js"></script>
+      <section class="cards">
+        <div class="card">
+          <h3>Total Users</h3>
+          <p>1,024</p>
+        </div>
+        <div class="card">
+          <h3>Revenue</h3>
+          <p>$8,540</p>
+        </div>
+        <div class="card">
+          <h3>Orders</h3>
+          <p>230</p>
+        </div>
+        <div class="card">
+          <h3>Feedbacks</h3>
+          <p>54</p>
+        </div>
+      </section>
+
+      <section class="table-section">
+        <h2>Recent Users</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Aryan Sharma</td>
+              <td>aryan@mail.com</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>Kriti Verma</td>
+              <td>kriti@mail.com</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>Ravi Mehra</td>
+              <td>ravi@mail.com</td>
+              <td>Active</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
 </body>
 </html>

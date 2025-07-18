@@ -1,42 +1,28 @@
-// Dynamic Project List
-const projects = [
-  {
-    title: "Form Validation",
-    image: "assets/images/form.png",
-    description: "A fully functional form with validation and error handling.",
-    link: "#"
-  },
-  {
-    title: "Image Slider",
-    image: "assets/images/slider.png",
-    description: "Responsive image carousel using JS.",
-    link: "#"
-  }
-];
+const sidebar = document.getElementById("sidebar");
+const toggleSidebar = document.getElementById("toggleSidebar");
+const toggleTheme = document.getElementById("toggleTheme");
 
-const container = document.getElementById("project-container");
-projects.forEach(p => {
-  const card = document.createElement("div");
-  card.className = "project-card";
-  card.innerHTML = `
-    <img src="${p.image}" alt="${p.title}" />
-    <h3>${p.title}</h3>
-    <p>${p.description}</p>
-    <a href="${p.link}" target="_blank">View Project</a>
-  `;
-  container.appendChild(card);
+// Sidebar Toggle
+toggleSidebar.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
 });
 
 // Theme Toggle
-const themeBtn = document.getElementById("themeToggle");
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-  localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
-});
+toggleTheme.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 
-// Load saved theme
-window.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-theme");
+  // Save theme preference
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
   }
 });
+
+// Load theme on reload
+window.onload = () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+};
